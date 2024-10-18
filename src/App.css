@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.book-display {
+  margin-top: 20px;
+}
+
+.chapter-buttons {
+  margin-top: -13px;
+}
+
+.chapter-btn {
+  margin: 5px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+}
+
+.chapter-btn:hover {
+  background-color: #4caf50;
+}
+
+.chapter-btn.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.chapter-images img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%; /* Scale to fit width */
+  max-height: 77vh; /* Scale to fit height, allowing some space for buttons */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+.image-container {
+  position: relative; /* Required for positioning the navigation divs */
+}
+
+.image-navigation {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%; /* Adjust width as needed */
+  height: 94%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.image-navigation.right {
+  right: 0; /* Position the right navigation */
+  left: auto; /* Reset left to avoid overlap */
+}
+
+.page-details {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .chapter-btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .page-details {
+    font-size: 14px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  button {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  .chapter-btn {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .page-details {
+    font-size: 15px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .chapter-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .page-details {
+    font-size: 16px;
+  }
+}
+
+/* Large Screen Styles */
+@media (min-width: 1025px) {
+  button {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .chapter-btn {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+
+  .page-details {
+    font-size: 18px;
+  }
+}
